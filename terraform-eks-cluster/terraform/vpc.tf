@@ -1,6 +1,6 @@
 resource "aws_vpc" "main" {
   ### Required
-  cidr_block = "10.0.0.0/16"
+  cidr_block = "192.168.0.0/16"
 
   ### Optional 
   # Makes your instances shared on the host.
