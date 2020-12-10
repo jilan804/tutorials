@@ -3,7 +3,7 @@
 
 resource "aws_eks_cluster" "eks" {
   # Name of the cluster.
-  name     = "eks"
+  name = "eks"
 
   # The Amazon Resource Name (ARN) of the IAM role that provides permissions for 
   # the Kubernetes control plane to make calls to AWS API operations on your behalf
@@ -63,7 +63,7 @@ POLICY
 resource "aws_iam_role_policy_attachment" "amazon_eks_cluster_policy" {
   # The ARN of the policy you want to apply
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
-  
+
   # The role the policy should be applied to
-  role       = aws_iam_role.eks.name
+  role = aws_iam_role.eks.name
 }

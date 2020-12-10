@@ -52,7 +52,7 @@ resource "aws_subnet" "private_1" {
   # A map of tags to assign to the resource.
   tags = {
     Name = "private-us-east-1a"
-    # "kubernetes.io/cluster/example" = "shared"
+    "kubernetes.io/cluster/eks" = "shared"
   }
 }
 
@@ -69,6 +69,6 @@ resource "aws_subnet" "private_2" {
   # A map of tags to assign to the resource.
   tags = {
     Name = "private-us-east-1b"
-    # "kubernetes.io/cluster/example" = "shared"
+    "kubernetes.io/cluster/eks" = "shared"
   }
 }
