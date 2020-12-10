@@ -37,6 +37,7 @@ resource "aws_eks_cluster" "eks" {
 
 # Resource: aws_iam_role
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role
+
 resource "aws_iam_role" "eks" {
   # The name of the role
   name = "eks-cluster"
