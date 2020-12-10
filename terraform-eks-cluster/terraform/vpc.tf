@@ -1,8 +1,7 @@
 resource "aws_vpc" "main" {
-  ### Required
+  # The CIDR block for the VPC.
   cidr_block = "192.168.0.0/16"
 
-  ### Optional 
   # Makes your instances shared on the host.
   instance_tenancy = "default"
 
@@ -30,6 +29,6 @@ resource "aws_vpc" "main" {
 output "vpc_id" {
   value       = aws_vpc.main.id
   description = "VPC id."
-  # Setting an output value as sensitive prevents Terraform from showing its value in plan and apply
+  # Setting an output value as sensitive prevents Terraform from showing its value in plan and apply.
   sensitive = false
 }

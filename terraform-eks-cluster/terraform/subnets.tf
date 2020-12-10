@@ -1,6 +1,6 @@
 resource "aws_subnet" "public_1" {
-  # The VPC ID
-  vpc_id     = aws_vpc.main.id
+  # The VPC ID.
+  vpc_id = aws_vpc.main.id
 
   # The CIDR block for the subnet.
   cidr_block = "192.168.0.0/18"
@@ -19,7 +19,7 @@ resource "aws_subnet" "public_1" {
 
 resource "aws_subnet" "public_2" {
   # The VPC ID
-  vpc_id     = aws_vpc.main.id
+  vpc_id = aws_vpc.main.id
 
   # The CIDR block for the subnet.
   cidr_block = "192.168.64.0/18"
@@ -29,7 +29,7 @@ resource "aws_subnet" "public_2" {
 
   # Required for EKS. Instances launched into the subnet should be assigned a public IP address.
   map_public_ip_on_launch = true
-  
+
   # A map of tags to assign to the resource.
   tags = {
     Name = "public-us-east-1b"
@@ -38,7 +38,7 @@ resource "aws_subnet" "public_2" {
 
 resource "aws_subnet" "private_1" {
   # The VPC ID
-  vpc_id     = aws_vpc.main.id
+  vpc_id = aws_vpc.main.id
 
   # The CIDR block for the subnet.
   cidr_block = "192.168.128.0/18"
@@ -48,13 +48,14 @@ resource "aws_subnet" "private_1" {
 
   # A map of tags to assign to the resource.
   tags = {
-    Name = "public-us-east-1a"
+    Name                            = "public-us-east-1a"
+    # "kubernetes.io/cluster/example" = "shared"
   }
 }
 
 resource "aws_subnet" "private_2" {
   # The VPC ID
-  vpc_id     = aws_vpc.main.id
+  vpc_id = aws_vpc.main.id
 
   # The CIDR block for the subnet.
   cidr_block = "192.168.192.0/18"
@@ -64,6 +65,7 @@ resource "aws_subnet" "private_2" {
 
   # A map of tags to assign to the resource.
   tags = {
-    Name = "public-us-east-1b"
+    Name                            = "public-us-east-1b"
+    # "kubernetes.io/cluster/example" = "shared"
   }
 }
