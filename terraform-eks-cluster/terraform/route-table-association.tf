@@ -1,4 +1,4 @@
-# aws_route_table_association
+# Resource: aws_route_table_association
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association
 
 resource "aws_route_table_association" "public1" {

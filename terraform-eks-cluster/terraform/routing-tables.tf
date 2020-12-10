@@ -1,4 +1,5 @@
-# aws_route_table - https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table
+# Resource: aws_route_table
+# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table
 
 resource "aws_route_table" "public" {
   # The VPC ID.

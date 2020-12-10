@@ -1,4 +1,5 @@
-# aws_subnet - https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet
+# Resource: aws_subnet
+# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet
 
 resource "aws_subnet" "public_1" {
   # The VPC ID.
@@ -50,7 +51,7 @@ resource "aws_subnet" "private_1" {
 
   # A map of tags to assign to the resource.
   tags = {
-    Name = "public-us-east-1a"
+    Name = "private-us-east-1a"
     # "kubernetes.io/cluster/example" = "shared"
   }
 }
@@ -67,7 +68,7 @@ resource "aws_subnet" "private_2" {
 
   # A map of tags to assign to the resource.
   tags = {
-    Name = "public-us-east-1b"
+    Name = "private-us-east-1b"
     # "kubernetes.io/cluster/example" = "shared"
   }
 }
