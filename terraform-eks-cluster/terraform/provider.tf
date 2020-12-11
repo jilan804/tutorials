@@ -1,3 +1,8 @@
+provider "aws" {
+  profile = "default"
+  region  = "us-east-1"
+}
+
 terraform {
   required_providers {
     aws = {
@@ -5,9 +10,4 @@ terraform {
       version = "~> 3.21"
     }
   }
-}
-
-provider "aws" {
-  profile = "default"
-  region  = "us-east-1"
 }
